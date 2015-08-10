@@ -1,5 +1,5 @@
 # Pulling-out-mitogenomes-from-UCE-data
-It ain't pretty, but it (probably) works...
+It ain't pretty, but it works...
 
 1) Create your working directory and copy over the contigs from your trinity-assemlies folder. Obviously change these to your own directories and paths. Once you are inside your trinity-assemblies folder, this is pulling out the Trinity.fasta file within each species folder and renaming it species_name.fasta (based on your folder names)
 ```
