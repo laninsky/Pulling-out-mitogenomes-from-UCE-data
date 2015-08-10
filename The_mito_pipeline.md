@@ -4,9 +4,9 @@ It ain't pretty, but it works...
 1) Create your working directory and copy over the contigs from your trinity-assemlies folder. Obviously change these to your own directories and paths. Once you are inside your trinity-assemblies folder, this is pulling out the Trinity.fasta file within each species folder and renaming it species_name.fasta (based on your folder names)
 ```
 mkdir froggie-mtDNA
-dest=/home/a499a400/Kaloula/froggie-mtDNA
+dest=/home/a499a400/kaloula/froggie-mtDNA
 #cd to trinity-assemblies folder
-for i in `ls`; do cp $i/Trinity.fasta $dest/$i.fasta; done;
+for i in `ls --color=never`; do cp $i/Trinity.fasta $dest/$i.fasta; done;
 ```
 
 2) create a blast database of your 'reference' mtDNA. I downloaded blast into my own directory to do this on complab2, but I bet you could do it on the cluster. Basically, I pulled all the Kaloula mtDNA off Genbank that I could find and downloaded it as a fasta file (All_mtDNA_kaloula_fasta), but you could just restrict this to individual species' mitogenomes (or genes e.g. cytb) if you wanted to. Genbank fasta downloads are awful and have line breaks in them, so the grep stage is just to make sure we have no blank lines in them which upsets BLAST.
