@@ -35,11 +35,12 @@ for i in `ls *.oldblast.fasta`; do seqname=`echo $i | sed "1s/.oldblast.fasta//"
 for i in `ls *.namelist`; do seqname=`echo $i | sed "1s/.namelist//"` ; ~/bin/seqtk/seqtk subseq $seqname.fasta $i | sed 's/>/>'"$seqname"'+/g' >> $seqname.newblast.fasta; done;
 ```
 
-6) Alright - here is where I probably should have got tricky and tried to write some kind of loop (but I was too lazy). If newblast is bigger in size than oldblast for any of the samples (run ls -l to see), delete old blast, rename newblast oldblast, and start again at the rm -rf *.namelist command (last part of #4) until you pull out no more sequences (you can use the code below to do the renaming). If newblast is bigger than oldblast, basically what we are saying is that you pulled out additional contigs on that second blast step (step #5), so we probably should keep going until you pull no more out! You could do this just for the problem children samples, but it doesn't take long just to do it for everybody...
+6) Alright - here is where I probably should have got tricky and tried to write some kind of loop (but I was too lazy). If newblast is bigger in size than oldblast for any of the samples (run ls -l to see), delete old blast, rename newblast oldblast, and start again at #5 until you pull out no more sequences (you can use the code below to do the renaming). If newblast is bigger than oldblast, basically what we are saying is that you pulled out additional contigs on that second blast step (step #5), so we probably should keep going until you pull no more out! You could do this just for the problem children samples, but it doesn't take long just to do it for everybody...
 
 ```
 rm -rf *.oldblast.*
 for i in `ls *.newblast.fasta`; do seqname=`echo $i | sed "1s/.newblast.fasta/.oldblast.fasta/"` ; mv $i $seqname; done ;
+rm -rf *.namelist
 ```
 
 7) If you don't care about coverage, you are done! This should be all the mtDNA-like contigs for each species, given as species_name.newblast.fasta. If you do care, read on!
