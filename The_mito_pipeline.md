@@ -190,6 +190,9 @@ BLAST: see citation information at http://www.biology.wustl.edu/gcg/blast.html#c
 
 R: R Core Team. 2015. R: A language and environment for statistical computing. URL http://www.R-project.org/. R Foundation for Statistical Computing, Vienna, Austria. https://www.r-project.org/
 
+Stringr:  Hadley Wickham (2012). stringr: Make it easier to work with strings..
+  R package version 0.6.2. http://CRAN.R-project.org/package=stringr (for up-to-date citation information run citation("stringr" in R)
+
 seqtk: available from https://github.com/lh3/seqtk
 
 bwa: See citation info at: http://bio-bwa.sourceforge.net/bwa.shtml#13 and Li, H. "Toward better understanding of artifacts in variant calling from high-coverage samples." Bioinformatics (Oxford, England) 30, no. 20 (2014): 2843.
