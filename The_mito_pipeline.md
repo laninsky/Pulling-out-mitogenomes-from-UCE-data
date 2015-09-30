@@ -1,5 +1,4 @@
 # Pulling-out-mitogenomes-from-UCE-data
-It ain't pretty, but it works...
 
 1) Create your working directory and copy over the contigs from your trinity-assemlies folder. Obviously change these to your own directories and paths. Once you are inside your trinity-assemblies folder, this is pulling out the Trinity.fasta file within each species folder and renaming it species_name.fasta (based on your folder names)
 ```
@@ -182,3 +181,17 @@ for i in *all.pileup; do rm temp*; cp $i temp; Rscript converttofasta.R; done;
 ```
 
 Finally) Just in case our little "buffer with Ns" worked and we extended out contigs, probably worth chucking them through Geneious etc again to make sure none have managed to get into merging territory. Also you'll want to search your contigs for "INDEL". bwa doesn't do very well with indels, so you will probably want to flag these for future investigation (i.e. tweak the reference for these and run them manually).
+
+#Citation info
+This pipeline was first published with: TBD
+
+This pipeline wouldn't be possible without:
+BLAST: see citation information at http://www.biology.wustl.edu/gcg/blast.html#citing
+
+R: R Core Team. 2015. R: A language and environment for statistical computing. URL http://www.R-project.org/. R Foundation for Statistical Computing, Vienna, Austria. https://www.r-project.org/
+
+seqtk: available from https://github.com/lh3/seqtk
+
+bwa: See citation info at: http://bio-bwa.sourceforge.net/bwa.shtml#13 and Li, H. "Toward better understanding of artifacts in variant calling from high-coverage samples." Bioinformatics (Oxford, England) 30, no. 20 (2014): 2843.
+
+samtools: See citation info at: http://www.htslib.org/doc/#manual-pages
