@@ -183,7 +183,9 @@ for i in *all.pileup; do rm temp*; cp $i temp; Rscript converttofasta.R; done;
 Finally) Just in case our little "buffer with Ns" worked and we extended out contigs, probably worth chucking them through Geneious etc again to make sure none have managed to get into merging territory. Also you'll want to search your contigs for "INDEL". bwa doesn't do very well with indels, so you will probably want to flag these for future investigation (i.e. tweak the reference for these and run them manually).
 
 #Citation info
-This pipeline was first published with: TBD
+This pipeline was first published with:
+
+Alexander, A.M., Su, Y.C., Oliveros, C.H., Olson, K.V., Travers, S.L. and Brown, R.M., 2017. Genomic data reveals potential for hybridization, introgression, and incomplete lineage sorting to confound phylogenetic relationships in an adaptive radiation of narrow‐mouth frogs. Evolution, 71(2), pp.475-488.
 
 This pipeline wouldn't be possible without:
 BLAST: see citation information at http://www.biology.wustl.edu/gcg/blast.html#citing
