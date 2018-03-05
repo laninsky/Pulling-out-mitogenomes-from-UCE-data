@@ -1,6 +1,6 @@
 # Pulling-out-mitogenomes-from-UCE-data
 
-NOTE: I think all the functionality of this repository is encompassed by: https://github.com/laninsky/direct_mito_sequencing
+NOTE: I think all the functionality of this repository is encompassed by: https://github.com/laninsky/direct_mito_sequencing (particularly step 2)
 
 So I am no longer actively maintaining this repository. If there is something that works for you in here, and not in direct_mito_sequencing let me know!
 
